@@ -1,7 +1,7 @@
 import { getAllAds, createNewAd, editAd, getAd } from '../helpers/api';
 import { getRandomString, getRandomNumber } from '../helpers/utils';
-
 import { apiUrl } from '../config/properties';
+
 describe('create new ad', () => {
   const adData = {
     name: getRandomString(5),
@@ -11,7 +11,8 @@ describe('create new ad', () => {
     status: true,
   };
   it('create new ad', async () => {
-    await createNewAd(apiUrl, adData);
+    const adCreated = await createNewAd(apiUrl, adData);
+    expect({ ...adData, _id: adCreated._id }).toStrictEqual(adCreated);
   });
   it('edit existing', async () => {
     const ads = await getAllAds(apiUrl);
