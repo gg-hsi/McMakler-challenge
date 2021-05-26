@@ -1,5 +1,6 @@
 const baseUrl = 'https://admin-advertisement.herokuapp.com';
 export const appUrl = `${baseUrl}/advertisements`;
+export const apiUrl = `${baseUrl}/api/advertisements`;
 export const localPaths = { screenshots: 'screenshots' };
 export const timeouts = {
   expectPuppeteer: 10000, // how much should be waited for a click or element presence
