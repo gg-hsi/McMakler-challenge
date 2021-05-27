@@ -48,6 +48,7 @@ export async function openAd(row) {
 export async function getAdName(row, cell) {
   const adNameElement = await expect(page).toMatchElement(
     getCellSelectorInTable(row, cell),
+    { visible: true },
   );
-  return await page.evaluate((el) => el.innerText, adNameElement);
+  return page.evaluate((el) => el.innerText, adNameElement);
 }
