@@ -1,0 +1,46 @@
+{
+  "root": true,
+  "env": {
+    "jest": true,
+    "es6": true,
+    "node": true
+  },
+  "plugins": ["jest", "prettier"],
+  "extends": [
+    "plugin:prettier/recommended",
+    "plugin:jest/all",
+    "eslint:recommended"
+  ],
+  "globals": {
+    "page": true,
+    "document": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 2020,
+    "sourceType": "module"
+  },
+  "rules": {
+    "no-console": "warn",
+    "jest/no-focused-tests": "warn",
+    "jest/expect-expect": "off",
+    "jest/no-disabled-tests": "warn",
+    "jest/no-identical-title": "error",
+    "jest/prefer-to-have-length": "warn",
+    "jest/prefer-expect-assertions": "off",
+    "jest/no-hooks": "off",
+    "jest/require-top-level-describe": "off",
+    "no-unused-expressions": "warn",
+    "camelcase": [
+      "error",
+      { "properties": "never", "ignoreDestructuring": true }
+    ],
+    "keyword-spacing": [
+      "error",
+      {
+        "before": true,
+        "after": true
+      }
+    ],
+    "semi": "warn"
+  }
+}
